@@ -1,0 +1,34 @@
+.header {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: #1c1c7a;
+}
+
+.header__nav a {
+  margin-left: 32px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1c1c7a;
+}
+
+.header__nav a:hover {
+  text-decoration: underline;
+}
+

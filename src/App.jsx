@@ -1,11 +1,14 @@
+import Header from './components/Header/header'
+//import './App.css'
+
 function App() {
   return (
-    <div>
-      <h1>PS Copiers</h1>
-      <p>Alquiler y servicio de impresoras</p>
-    </div>
-  );
+    <>
+      <Header />
+    </>
+  )
 }
 
-export default App;
+export default App
+
 
