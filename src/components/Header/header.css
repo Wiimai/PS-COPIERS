@@ -1,10 +1,14 @@
 .header {
   width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background-color: #ffffff;
+  transition: box-shadow 0.3s ease;
 }
 
 .header__container {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 24px 40px;
 
@@ -14,8 +18,8 @@
 }
 
 .header__logo {
-  font-weight: 700;
-  font-size: 22px;
+  font-weight: 800;
+  font-size: 30px;
   letter-spacing: 1px;
   color: #1c1c7a;
 }
@@ -23,8 +27,8 @@
 .header__nav a {
   margin-left: 32px;
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 700;
   color: #1c1c7a;
 }
 
@@ -32,3 +36,6 @@
   text-decoration: underline;
 }
 
+.header--scrolled {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
