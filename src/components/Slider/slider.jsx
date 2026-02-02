@@ -34,10 +34,12 @@ export default function Slider() {
   };
 
   return (
-    <section
-      className="hero"
-      style={{ backgroundImage: `url(${slides[current].image})` }}
-    >
+    <section className="hero">
+    <img
+        src={slides[current].image}
+        alt=""
+        className="hero__image"
+    />
       <div className="hero__overlay">
         <h1>{slides[current].title}</h1>
         <p>{slides[current].text}</p>
