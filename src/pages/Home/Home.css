@@ -1,35 +1,3 @@
-.hero {
-  height: 90vh;
-  width: 100%;
-  background-image: yellow;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-.hero__overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 4rem;
-  color: white;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  max-width: 500px;
-  margin-bottom: 2rem;
-}
-
-.hero button {
-  width: fit-content;
+.home {
+  padding-top: 2rem;
 }
