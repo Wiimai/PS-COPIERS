@@ -4,18 +4,18 @@ import "./Slider.css";
 const slides = [
   {
     image: "/Slide1.png",
-    title: "Soluciones en impresión",
-    text: "Alquiler, venta y servicio técnico de impresoras",
+    title: "Alquiler mensual de multifunciones sin preocupaciones",
+    text: "Equipos Brother con servicio técnico e insumos incluidos. Nos ocupamos de todo para que tu oficina o negocio no se detenga.",
   },
   {
     image: "/Slide2.jpg",
-    title: "Impresoras para empresas",
-    text: "Equipos confiables para alto volumen de trabajo",
+    title: "Especialistas en multifunciones Brother",
+    text: "Instalación, mantenimiento y soporte técnico para equipos de alto rendimiento.",
   },
   {
     image: "/Slide3.jpg",
-    title: "Soporte técnico especializado",
-    text: "Atención rápida y personalizada",
+    title: "Soporte rápido y atención personalizada",
+    text: "Respondemos rápido, entendemos tu necesidad y te damos soluciones reales.",
   },
 ];
 
@@ -25,7 +25,7 @@ export default function Slider() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 6000);
+    }, 20000);
 
     return () => clearInterval(interval);
   }, []);
