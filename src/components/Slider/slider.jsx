@@ -50,6 +50,15 @@ export default function Slider() {
       <button className="hero__arrow right" onClick={nextSlide}>
         ›
       </button>
+      <div className="hero__dots">
+        {slides.map((_, index) => (
+            <button
+            key={index}
+            className={`hero__dot ${index === current ? "active" : ""}`}
+            onClick={() => setCurrent(index)}
+            />
+        ))}
+      </div>
     </section>
   );
 }

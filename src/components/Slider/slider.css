@@ -42,3 +42,37 @@
 .hero__arrow.right {
   right: 20px;
 }
+
+.hero__dots {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hero:hover .hero__dots {
+  opacity: 1;
+}
+
+.hero__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.hero__dot.active {
+  background: white;
+  transform: scale(1.3);
+}
+
