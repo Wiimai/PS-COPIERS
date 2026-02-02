@@ -108,3 +108,46 @@
   background: white;
   transform: scale(1.3);
 }
+
+
+.hero__overlay h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.15;
+  max-width: 1200px;
+  margin-bottom: 1rem;
+}
+
+.hero__overlay p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  max-width: 600px;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero__overlay button {
+  align-self: flex-start;
+
+  background-color: #1f3c88;
+  color: white;
+
+  border: none;
+  border-radius: 999px;
+
+  padding: 0.8rem 1.8rem;
+
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.hero__overlay button:hover {
+  background-color: #162f6a;
+  transform: translateY(-1px);
+}

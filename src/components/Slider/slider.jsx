@@ -4,7 +4,7 @@ import "./Slider.css";
 const slides = [
   {
     image: "/Slide1.png",
-    title: "Alquiler mensual de multifunciones sin preocupaciones",
+    title: "Alquiler de multifunciones sin preocupaciones",
     text: "Equipos Brother con servicio técnico e insumos incluidos. Nos ocupamos de todo para que tu oficina o negocio no se detenga.",
   },
   {
@@ -52,7 +52,7 @@ export default function Slider() {
             <div className="hero__overlay">
               <h1>{slide.title}</h1>
               <p>{slide.text}</p>
-              <button>Contactanos</button>
+              <button>Solicitar propuesta</button>
             </div>
           </div>
         ))}
