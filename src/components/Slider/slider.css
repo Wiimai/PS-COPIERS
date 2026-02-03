@@ -5,6 +5,9 @@
   border-radius: 40px;
   overflow: hidden;
   background-color: white;
+      box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.22),
+    0 8px 18px rgba(31, 60, 136, 0.18);
 }
 
 /* TRACK que se desplaza */
@@ -130,7 +133,7 @@
 .hero__overlay button {
   align-self: flex-start;
 
-  background-color: #1f3c88;
+  background-color: #051849;
   color: white;
 
   border: none;
@@ -148,6 +151,6 @@
 }
 
 .hero__overlay button:hover {
-  background-color: #162f6a;
+  background-color: #08086c;
   transform: translateY(-1px);
 }
