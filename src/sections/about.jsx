@@ -1,54 +1,69 @@
 import "./About.css";
-import { Printer, Wrench, Users } from "lucide-react";
+import {
+  FaPrint,
+  FaDollarSign,
+  FaBolt,
+  FaHospital
+} from "react-icons/fa";
+
+
 
 export default function About() {
   return (
     <section className="about">
       <div className="about__container">
 
-        {/* Header impactante */}
-        <div className="about__hero">
-          <div className="about__years">
-            <span>+30</span>
-            <small>años de experiencia</small>
-          </div>
-
-          <h2>
-            Soluciones de impresión que acompañan
-            <br /> el ritmo de tu organización
-          </h2>
+        {/* TEXTO PRINCIPAL */}
+        <div className="about__intro">
+          <h2>Más que equipos, ofrecemos continuidad</h2>
+          <p>
+            En <strong>PS Copiers</strong> alquilamos impresoras y multifunciones con
+            servicio técnico e insumos incluidos, ajustando el valor del servicio
+            según el uso real de cada cliente.
+          </p>
         </div>
 
-        {/* Cards */}
-        <div className="about__cards">
+        {/* BLOQUE +30 */}
+        <div className="about__experience">
+          <span className="about__years">+30 AÑOS</span>
+          <p>Brindando servicios de impresión estables y personalizados</p>
+        </div>
 
-          <div className="about__card">
-            <Printer size={36} />
-            <h3>Equipos profesionales</h3>
-            <p>
-              Fotocopiadoras e impresoras multifunción color y blanco y negro,
-              seleccionadas según el volumen real de trabajo.
-            </p>
-          </div>
+        {/* CHIPS INFORMATIVOS */}
+        <div className="about__features">
+            <div className="about__feature">
+                <FaPrint className="about__icon" />
+                <h4>Servicio completo</h4>
+                <p>Equipos, insumos y soporte técnico incluidos</p>
+            </div>
 
-          <div className="about__card">
-            <Wrench size={36} />
-            <h3>Servicio incluido</h3>
-            <p>
-              Alquiler con soporte técnico, mantenimiento e insumos incluidos,
-              para que no tengas interrupciones.
-            </p>
-          </div>
+            <div className="about__feature">
+                <FaDollarSign className="about__icon" />
+                <h4>Valor personalizado</h4>
+                <p>Pagás según el volumen real de impresión</p>
+            </div>
 
-          <div className="about__card">
-            <Users size={36} />
-            <h3>Atención personalizada</h3>
-            <p>
-              Trabajamos con empresas, comercios, librerías, hospitales e
-              instituciones con respuestas rápidas y trato directo.
-            </p>
-          </div>
+            <div className="about__feature">
+                <FaBolt className="about__icon" />
+                <h4>Respuesta rápida</h4>
+                <p>Atención directa y sin intermediarios</p>
+            </div>
 
+            <div className="about__feature">
+                <FaHospital className="about__icon" />
+                <h4>Experiencia aplicada</h4>
+                <p>Empresas, librerías, hospitales y más</p>
+            </div>
+        </div>
+
+
+        {/* CIERRE */}
+        <div className="about__closing">
+          <span className="about__line"></span>
+          <p>
+            Cada cliente trabaja distinto.  
+            <strong> Su servicio de impresión también debería hacerlo.</strong>
+          </p>
         </div>
 
       </div>
