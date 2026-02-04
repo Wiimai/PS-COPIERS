@@ -1,0 +1,229 @@
+/* =========================
+   SECCIÓN ZONAS
+========================= */
+
+.zones {
+  width: 100%;
+  padding: 140px 0;
+  position: relative;
+
+  background: linear-gradient(
+    180deg,
+    #08153b 30%,
+    #08153b 25%,
+    #0b1b4d 70%,
+    #071643 20%,
+    #ffffff 100%
+  );
+
+  overflow: hidden;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.zones--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.zones__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  align-items: center;
+  gap: 90px;
+}
+
+/* =========================
+   TEXTO
+========================= */
+
+.zones__content h2 {
+  font-size: 64px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 22px;
+  position: relative;
+  letter-spacing: -1px;
+  line-height: 1.05;
+
+  opacity: 0;
+  transform: translateY(25px);
+}
+
+/* Línea decorativa premium */
+.zones__content h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -14px;
+
+  width: 90px;
+  height: 5px;
+  border-radius: 6px;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #6f86ff
+  );
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.7s ease;
+}
+
+.zones__content p {
+  font-size: 18px;
+  line-height: 1.75;
+  max-width: 520px;
+  color: rgba(255, 255, 255, 0.85);
+
+  margin-top: 36px;
+
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Activación animaciones texto */
+.zones--visible .zones__content h2 {
+  animation: fadeUp 0.9s ease forwards;
+}
+
+.zones--visible .zones__content h2::after {
+  transform: scaleX(1);
+}
+
+.zones--visible .zones__content p {
+  animation: fadeUp 0.9s ease forwards;
+  animation-delay: 0.18s;
+}
+
+/* =========================
+   MAPA
+========================= */
+
+.zones__map {
+  position: relative;
+
+  opacity: 0;
+  transform: translateY(35px) scale(0.96);
+}
+
+.zones--visible .zones__map {
+  animation: mapEnter 1s ease forwards;
+  animation-delay: 0.35s;
+}
+
+.zones__map img {
+  width: 100%;
+  max-width: 560px;
+  margin-left: auto;
+
+  display: block;
+
+  border-radius: 26px;
+
+  filter: drop-shadow(0 25px 40px rgba(0, 0, 0, 0.25));
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.zones__map:hover img {
+  transform: scale(1.03);
+  filter: drop-shadow(0 32px 55px rgba(0, 0, 0, 0.3));
+}
+
+/* =========================
+   DECORACIÓN DE FONDO
+========================= */
+
+.zones::before {
+  content: "";
+  position: absolute;
+  left: -160px;
+  top: 120px;
+
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(111, 134, 255, 0.25),
+    transparent 70%
+  );
+}
+
+.zones::after {
+  content: "";
+  position: absolute;
+  right: -140px;
+  bottom: 120px;
+
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.18),
+    transparent 70%
+  );
+}
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mapEnter {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1024px) {
+  .zones__inner {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .zones__content h2 {
+    font-size: 52px;
+  }
+
+  .zones__map img {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .zones {
+    padding: 100px 0;
+  }
+
+  .zones__content h2 {
+    font-size: 40px;
+  }
+
+  .zones__content p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
