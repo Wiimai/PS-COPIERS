@@ -7,14 +7,15 @@
   padding: 140px 0;
   position: relative;
 
-  background: linear-gradient(
+    background: linear-gradient(
     180deg,
-    #08153b 30%,
-    #08153b 25%,
-    #0b1b4d 70%,
-    #071643 20%,
+    #08153b 0%,
+    #08153b 60%,
+    #0b1b4d 90%,
+    #f5f7fc 99%,
     #ffffff 100%
-  );
+    );
+
 
   overflow: hidden;
 
