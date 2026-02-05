@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  height: 85vh;
+  height: 80.5vh;
   margin: 20px;
   border-radius: 40px;
   overflow: hidden;
@@ -133,16 +133,16 @@
 .hero__overlay button {
   align-self: flex-start;
 
-  background-color: #051849;
-  color: white;
+  background-color: #ffffff;
+  color: #120037;
 
   border: none;
   border-radius: 999px;
 
   padding: 0.8rem 1.8rem;
 
-  font-size: 0.95rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-weight: 700;
   letter-spacing: 0.3px;
 
   cursor: pointer;
@@ -151,6 +151,7 @@
 }
 
 .hero__overlay button:hover {
-  background-color: #08086c;
+  background-color: #120037;
+  color: #ffffff;
   transform: translateY(-1px);
 }

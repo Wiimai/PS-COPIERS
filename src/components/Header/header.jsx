@@ -10,13 +10,11 @@ function Header() {
     const onScroll = () => {
       const currentScroll = window.scrollY
 
-      setScrolled(currentScroll > 10)
+      setScrolled(currentScroll > 20)
 
-      if (currentScroll > lastScroll && currentScroll > 100) {
-        // bajando
+      if (currentScroll > lastScroll && currentScroll > 120) {
         setHidden(true)
       } else {
-        // subiendo
         setHidden(false)
       }
 
@@ -35,19 +33,24 @@ function Header() {
       `}
     >
       <div className="header__container">
+
+        {/* LOGO */}
         <div className="header__logo">
-          PS COPIERS
+          <img src="../../../v2.svg" alt="PS Copiers" />
         </div>
 
+        {/* NAV */}
         <nav className="header__nav">
-          <a href="#">Sobre nosotros</a>
-          <a href="#">Servicios</a>
-          <a href="#">Productos</a>
-          <a href="#">Contacto</a>
+          <a href="#nosotros">SOBRE NOSOTROS</a>
+          <a href="#servicios">SERVICIOS</a>
+          <a href="#productos">PRODUCTOS</a>
+          <a href="#contacto" className="nav__cta">CONTACTO</a>
         </nav>
+
       </div>
     </header>
   )
 }
 
 export default Header
+

@@ -4,47 +4,112 @@
   top: 0;
   z-index: 1000;
 
-  background-color: #ffffff;
-  box-shadow: 0 4px 12px rgba(3, 7, 62, 0.5);
+  background: #ffffff;
 
-  transition: 
+  /* sombra base */
+  box-shadow: 0 2px 8px rgba(3, 7, 62, 0.08);
+
+  transition:
     transform 0.35s ease,
-    box-shadow 0.3s ease;
+    box-shadow 0.35s ease;
 }
+
 
 .header--hidden {
   transform: translateY(-100%);
 }
 
+/* CONTENEDOR */
 .header__container {
   max-width: 1500px;
   margin: 0 auto;
-  padding: 24px 40px;
+  padding: 28px 48px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  transition: padding 0.35s ease;
 }
 
+/* ESTADO SCROLL */
+.header--scrolled {
+  box-shadow: 0 10px 30px rgba(3, 7, 62, 0.15);
+}
+
+
+/* LOGO */
 .header__logo {
-  font-weight: 800;
-  font-size: 30px;
-  letter-spacing: 1px;
-  color: #1c1c7a;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.header__logo img {
+  height: 67px;
+  width: auto;
+  transition: height 0.3s ease;
+}
+
+.header--scrolled .header__logo img {
+  height: 50px;
+}
+
+.header__logo span {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  color: #0b1b4d;
+  white-space: nowrap;
+}
+
+/* NAV */
+.header__nav {
+  display: flex;
+  align-items: center;
 }
 
 .header__nav a {
-  margin-left: 32px;
-  text-decoration: none;
-  font-size: 18px;
+  position: relative;
+  margin-left: 50px;
+
+  font-size: 25px;
   font-weight: 700;
-  color: #1c1c7a;
+  color: #120037;
+  text-decoration: none;
+
+  transition: color 0.3s ease;
 }
 
-.header__nav a:hover {
-  text-decoration: underline;
+/* underline animado */
+.header__nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #1c1c7a;
+  transition: width 0.3s ease;
 }
 
-.header--scrolled {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+.header__nav a:hover::after {
+  width: 100%;
+}
+
+/* CTA */
+.nav__cta {
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #120037, #1c1c7a);
+  color: #ffffff !important;
+  margin-left: 48px;
+}
+
+.nav__cta::after {
+  display: none;
+}
+
+.nav__cta:hover {
+  filter: brightness(1.1);
 }
