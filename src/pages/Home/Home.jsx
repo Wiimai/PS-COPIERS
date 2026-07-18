@@ -4,17 +4,21 @@ import Process from "../../components/Process/process"
 import Clients from "../../components/Clients/clients"
 import Zone from "../../components/Zone/zone"
 import Contact from "../../components/Contact/contact"
+
 import "./Home.css";
 
 export default function Home() {
   return (
     <section className="home">
       <Slider />
-      <About/>
-      <Process/>
-      <Clients/>
-      <Zone/>
-      <Contact/>
+
+        <About/>
+        <Process/>
+        <Clients/>
+        <Zone/>
+        <Contact/>
+
+
     </section>
   );
 }
